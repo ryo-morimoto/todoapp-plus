@@ -1,28 +1,24 @@
-const ENTER_KEYCODE = 13;
+const formElement = document.querySelector("[data-todo='form']");
+const inputElement = document.querySelector("[data-todo='input']");
+const listElement = document.querySelector("[data-todo='todo-list'] ul");
 
-const todoTextElement = document.getElementById("js-todo-text");
-const todoListElement = document.getElementById("js-list");
-
-todoTextElement.onkeyup = function (e) {
-  if (e.keyCode !== ENTER_KEYCODE) {
-    return;
-  }
-
+formElement.addEventListener("submit", (event) => {
+  event.preventDefault();
   newItem();
-};
+});
 
 function newItem() {
-  const todoText = todoTextElement.value;
+  const todoText = inputElement.value;
   if (!todoText) {
     return;
   }
 
-  const todoItem = document.createElement("li");
-  todoItem.appendChild(document.createTextNode(`- ${todoText}`));
-  todoItem.onclick = removeItem;
+  const item = document.createElement("li");
+  item.appendChild(document.createTextNode(todoText));
+  item.onclick = removeItem;
 
-  todoListElement.insertAdjacentElement("afterbegin", todoItem);
-  todoTextElement.value = "";
+  listElement.insertAdjacentElement("afterbegin", item);
+  inputElement.value = "";
 }
 
 function removeItem(e) {

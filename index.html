@@ -4,17 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TODO List</title>
+    <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" defer src="app.js"></script>
+    <script defer src="app.js"></script>
   </head>
   <body>
-    <input
-      type="text"
-      name="todo-text"
-      id="js-todo-text"
-      maxlength="50"
-      placeholder="きょうやること"
-    />
-    <ul id="js-list"></ul>
+    <header>
+      <!-- ヘッダーロゴ -->
+    </header>
+    <main>
+      <div class="todo-content">
+        <form data-todo="form">
+          <input
+            type="text"
+            name="new-todo"
+            data-todo="input"
+            maxlength="50"
+            placeholder="きょうやること"
+          />
+        </form>
+        <section class="todos">
+          <h1>未完了</h1>
+          <div class="todo-list" data-todo="todo-list">
+            <ul>
+              <li>テスト勉強</li>
+              <li>洗濯</li>
+              <li>掃除</li>
+            </ul>
+          </div>
+        </section>
+        <section class="completes">
+          <h1>完了</h1>
+          <div class="complete-list" data-todo="complete-list">
+            <ul>
+              <li>水やり</li>
+              <li>お弁当づくり</li>
+              <li>ごみ捨て</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <!-- コピーライト -->
+    </footer>
   </body>
 </html>
