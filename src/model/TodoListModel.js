@@ -7,6 +7,7 @@ export class TodoListModel extends EventEmitter {
    * @param {TodoItemModel[]} [items] 初期アイテム一覧
    */
   constructor(items = []) {
+    super();
     this.#items = items;
   }
 
