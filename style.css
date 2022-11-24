@@ -1,11 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
+@import "config.css";
+
+* {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  word-break: break-all;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
 html {
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans", Meiryo, sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  max-width: 500px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 input {
